@@ -1,0 +1,3 @@
+- insert:
+    - id: pec-tools
+      name: 'D:/workspace/pec-agent/plugins/pec-tools/lib/index.js'

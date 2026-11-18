@@ -155,3 +155,27 @@ vite.config.ts.timestamp-*
 .nx/cache
 .nx/workspace-data
 .nx/migrate-runs
+# ---- pec-agent 项目规则 ----
+
+# 依赖与构建产物
+node_modules/
+plugins/pec-tools/lib/
+
+# 本机 DSH 运行时状态（会话、存储、匿名标识）
+.dsh-local-test/
+
+# 本机工具链安装，不属于项目内容
+.dsh/pstack/
+.dsh/vendor/
+
+# 本机安装的通用技能，只保留本项目自己的技能
+.dsh/skills/*
+!.dsh/skills/freight-anomaly-standard/
+
+# 本机环境备份与个人 agent 配置
+AGENTS.local.md
+desktop.patch.before-pec.yml
+
+# 测评材料：如需随仓库分发，自行 git add -f
+业务案例实测任务书-候选人版-v3.1.pdf
+预装环境规格-v1.0.docx
